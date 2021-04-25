@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ContentsViewController" customModule="TheMovieDBDemo" customModuleProvider="target">
+            <connections>
+                <outlet property="collectionView" destination="f8a-Lj-M8B" id="myp-jc-use"/>
+                <outlet property="searchBar" destination="Mik-OD-wpJ" id="a11-0O-BdZ"/>
+                <outlet property="segmentControl" destination="Zs5-59-9WO" id="Gz2-Zj-7pG"/>
+                <outlet property="titleLabel" destination="Hq9-Y4-CpF" id="bO4-D3-Iyy"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="Mik-OD-wpJ">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="4LT-Ab-duC"/>
+                    </constraints>
+                    <textInputTraits key="textInputTraits"/>
+                </searchBar>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="f8a-Lj-M8B">
+                    <rect key="frame" x="0.0" y="91" width="414" height="645"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ld2-nr-3K9">
+                        <size key="itemSize" width="128" height="128"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+                <segmentedControl hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Zs5-59-9WO">
+                    <rect key="frame" x="8" y="52" width="398" height="32"/>
+                    <segments>
+                        <segment title="Movies"/>
+                        <segment title="People"/>
+                        <segment title="TV"/>
+                    </segments>
+                </segmentedControl>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Most Populars" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hq9-Y4-CpF">
+                    <rect key="frame" x="8" y="52" width="398" height="31"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemGray5Color"/>
+            <constraints>
+                <constraint firstItem="Mik-OD-wpJ" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="3ak-cP-L5h"/>
+                <constraint firstItem="f8a-Lj-M8B" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="3gM-fA-63S"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Zs5-59-9WO" secondAttribute="trailing" constant="8" id="40s-Xm-Qkb"/>
+                <constraint firstItem="Hq9-Y4-CpF" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="8" id="9b5-aM-OOr"/>
+                <constraint firstItem="Mik-OD-wpJ" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="EiR-R5-P0Q"/>
+                <constraint firstItem="f8a-Lj-M8B" firstAttribute="top" secondItem="Zs5-59-9WO" secondAttribute="bottom" constant="8" id="QRn-Y3-fcz"/>
+                <constraint firstItem="Hq9-Y4-CpF" firstAttribute="top" secondItem="Mik-OD-wpJ" secondAttribute="bottom" constant="8" id="QW7-dm-959"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Hq9-Y4-CpF" secondAttribute="trailing" constant="8" id="YOu-gX-n8I"/>
+                <constraint firstItem="Zs5-59-9WO" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="8" id="bZ4-bg-lOy"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="f8a-Lj-M8B" secondAttribute="bottom" id="bd6-5T-v8h"/>
+                <constraint firstItem="Zs5-59-9WO" firstAttribute="top" secondItem="Mik-OD-wpJ" secondAttribute="bottom" constant="8" id="bsK-j8-TwB"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="f8a-Lj-M8B" secondAttribute="trailing" id="qOu-k2-xSf"/>
+                <constraint firstItem="Mik-OD-wpJ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="xVf-uE-lqG"/>
+                <constraint firstItem="f8a-Lj-M8B" firstAttribute="top" secondItem="Hq9-Y4-CpF" secondAttribute="bottom" constant="8" id="z0h-eQ-hM3"/>
+            </constraints>
+            <point key="canvasLocation" x="-317.39130434782612" y="-23.64130434782609"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

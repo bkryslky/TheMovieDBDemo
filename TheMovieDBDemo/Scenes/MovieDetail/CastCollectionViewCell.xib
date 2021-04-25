@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CastCollectionViewCell" id="gTV-IL-0wX" customClass="CastCollectionViewCell" customModule="TheMovieDBDemo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="120" height="210"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="120" height="210"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PdB-eH-GNN">
+                        <rect key="frame" x="8" y="16" width="104" height="160"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="160" id="dOE-Qn-0NS"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sUU-31-bNJ">
+                        <rect key="frame" x="8" y="184" width="104" height="19.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="PdB-eH-GNN" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="3h1-Kn-wcT"/>
+                <constraint firstAttribute="trailing" secondItem="sUU-31-bNJ" secondAttribute="trailing" constant="8" id="65a-S3-l5V"/>
+                <constraint firstItem="sUU-31-bNJ" firstAttribute="top" secondItem="PdB-eH-GNN" secondAttribute="bottom" constant="8" id="J9i-fZ-4Yf"/>
+                <constraint firstItem="PdB-eH-GNN" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="16" id="jcB-KN-b0s"/>
+                <constraint firstAttribute="trailing" secondItem="PdB-eH-GNN" secondAttribute="trailing" constant="8" id="kTr-HJ-boc"/>
+                <constraint firstItem="sUU-31-bNJ" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="yNk-7g-f7s"/>
+            </constraints>
+            <size key="customSize" width="104" height="217"/>
+            <connections>
+                <outlet property="imageView" destination="PdB-eH-GNN" id="RFc-A9-eeF"/>
+                <outlet property="titleLabel" destination="sUU-31-bNJ" id="iFR-bv-MUI"/>
+            </connections>
+            <point key="canvasLocation" x="-243.47826086956525" y="149.66517857142856"/>
+        </collectionViewCell>
+    </objects>
+</document>
